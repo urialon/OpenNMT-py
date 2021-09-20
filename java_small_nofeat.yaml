@@ -20,7 +20,6 @@ save_data: java_small_data
 overwrite: False
 
 save_model: java_small_transformer_nofeat/model
-save_config: java_small_transformer_nofeat/config
 save_checkpoint_steps: 10000
 keep_checkpoint: 10
 seed: 3435
