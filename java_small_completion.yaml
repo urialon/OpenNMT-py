@@ -63,36 +63,76 @@ src_onmttok_kwargs: "{'mode': 'space'}"
 tgt_onmttok_kwargs: "{'mode': 'space'}"
 
 # # Vocab opts
-src_vocab: java_small_transformer_small/data.vocab.src
-tgt_vocab: java_small_transformer_small/data.vocab.tgt
+src_vocab: java_small_transformer_sum/data/data.vocab.src
+tgt_vocab: java_small_transformer_sum/data/data.vocab.tgt
 src_feats_vocab:
-    feat_0: java_small_transformer_small/vocab/data.vocab.feat_0
-    feat_1: java_small_transformer_small/vocab/data.vocab.feat_1
-    feat_2: java_small_transformer_small/vocab/data.vocab.feat_2
-    feat_3: java_small_transformer_small/vocab/data.vocab.feat_3
-    feat_4: java_small_transformer_small/vocab/data.vocab.feat_4
-    feat_5: java_small_transformer_small/vocab/data.vocab.feat_5
-    feat_6: java_small_transformer_small/vocab/data.vocab.feat_6
-    feat_7: java_small_transformer_small/vocab/data.vocab.feat_7
-    feat_8: java_small_transformer_small/vocab/data.vocab.feat_8
-    feat_9: java_small_transformer_small/vocab/data.vocab.feat_9
-    feat_10: java_small_transformer_small/vocab/data.vocab.feat_10
-    feat_11: java_small_transformer_small/vocab/data.vocab.feat_11
-    feat_12: java_small_transformer_small/vocab/data.vocab.feat_12
-    feat_13: java_small_transformer_small/vocab/data.vocab.feat_13
-    feat_14: java_small_transformer_small/vocab/data.vocab.feat_14
-    feat_15: java_small_transformer_small/vocab/data.vocab.feat_15
-    feat_16: java_small_transformer_small/vocab/data.vocab.feat_16
-    feat_17: java_small_transformer_small/vocab/data.vocab.feat_17
-    feat_18: java_small_transformer_small/vocab/data.vocab.feat_18
-    feat_19: java_small_transformer_small/vocab/data.vocab.feat_19
-    feat_20: java_small_transformer_small/vocab/data.vocab.feat_20
-    feat_21: java_small_transformer_small/vocab/data.vocab.feat_21
-    feat_22: java_small_transformer_small/vocab/data.vocab.feat_22
-    feat_23: java_small_transformer_small/vocab/data.vocab.feat_23
+    feat_0: java_small_transformer_sum/data/vocab/data.vocab.feat_0
+    feat_1: java_small_transformer_sum/data/vocab/data.vocab.feat_1
+    feat_2: java_small_transformer_sum/data/vocab/data.vocab.feat_2
+    feat_3: java_small_transformer_sum/data/vocab/data.vocab.feat_3
+    feat_4: java_small_transformer_sum/data/vocab/data.vocab.feat_4
+    feat_5: java_small_transformer_sum/data/vocab/data.vocab.feat_5
+    feat_6: java_small_transformer_sum/data/vocab/data.vocab.feat_6
+    feat_7: java_small_transformer_sum/data/vocab/data.vocab.feat_7
+    feat_8: java_small_transformer_sum/data/vocab/data.vocab.feat_8
+    feat_9: java_small_transformer_sum/data/vocab/data.vocab.feat_9
+    feat_10: java_small_transformer_sum/data/vocab/data.vocab.feat_10
+    feat_11: java_small_transformer_sum/data/vocab/data.vocab.feat_11
+    feat_12: java_small_transformer_sum/data/vocab/data.vocab.feat_12
+    feat_13: java_small_transformer_sum/data/vocab/data.vocab.feat_13
+    feat_14: java_small_transformer_sum/data/vocab/data.vocab.feat_14
+    feat_15: java_small_transformer_sum/data/vocab/data.vocab.feat_15
+    feat_16: java_small_transformer_sum/data/vocab/data.vocab.feat_16
+    feat_17: java_small_transformer_sum/data/vocab/data.vocab.feat_17
+    feat_18: java_small_transformer_sum/data/vocab/data.vocab.feat_18
+    feat_19: java_small_transformer_sum/data/vocab/data.vocab.feat_19
+    feat_20: java_small_transformer_sum/data/vocab/data.vocab.feat_20
+    feat_21: java_small_transformer_sum/data/vocab/data.vocab.feat_21
+    feat_22: java_small_transformer_sum/data/vocab/data.vocab.feat_22
+    feat_23: java_small_transformer_sum/data/vocab/data.vocab.feat_23
 feat_merge: 'sum'
 
 save_data: java_small_data
 overwrite: False
 
+save_model: java_small_transformer_sum/model
+save_checkpoint_steps: 10000
+keep_checkpoint: 10
+seed: 3435
+train_steps: 500000
+valid_steps: 10000
+warmup_steps: 8000
+report_every: 100
+
+decoder_type: transformer
+encoder_type: transformer
+word_vec_size: 512
+rnn_size: 512
+layers: 6
+transformer_ff: 2048
+heads: 8
+
+accum_count: 8
+optim: adam
+adam_beta1: 0.9
+adam_beta2: 0.998
+decay_method: noam
+learning_rate: 2.0
+max_grad_norm: 0.0
+
+batch_size: 4096
+batch_type: tokens
+normalization: tokens
+dropout: 0.1
+label_smoothing: 0.1
+
+max_generator_batches: 2
+
+param_init: 0.0
+param_init_glorot: 'true'
+position_encoding: 'true'
+
+world_size: 1
+gpu_ranks:
+- 0
 
