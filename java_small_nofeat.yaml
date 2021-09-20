@@ -13,8 +13,8 @@ src_onmttok_kwargs: "{'mode': 'space'}"
 tgt_onmttok_kwargs: "{'mode': 'space'}"
 
 # # Vocab opts
-src_vocab: ../java_small_transformer_sum/data/data.vocab.src
-tgt_vocab: ../java_small_transformer_sum/data/data.vocab.tgt
+src_vocab: java_small_transformer_sum/data/data.vocab.src
+tgt_vocab: java_small_transformer_sum/data/data.vocab.tgt
 
 save_data: java_small_data
 overwrite: False
