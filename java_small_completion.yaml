@@ -27,7 +27,7 @@ data:
             feat_21: ../synpos/data/java-small-processed/train_feat21.txt
             feat_22: ../synpos/data/java-small-processed/train_feat22.txt
             feat_23: ../synpos/data/java-small-processed/train_feat23.txt
-        transforms: [filterfeats, onmt_tokenize, inferfeats, filtertoolong]
+        transforms: [filterfeats, onmt_tokenize, inferfeats] #, filtertoolong]
         weight: 1
     valid:
         path_src: ../synpos/data/java-small-processed/val_src.txt
@@ -59,6 +59,9 @@ data:
             feat_23: ../synpos/data/java-small-processed/val_feat23.txt
         transforms: [filterfeats, onmt_tokenize, inferfeats]
 
+src_onmttok_kwargs: "{'mode': 'space'}"
+tgt_onmttok_kwargs: "{'mode': 'space'}"
+
 # # Vocab opts
 src_vocab: java_small_transformer_small/data.vocab.src
 tgt_vocab: java_small_transformer_small/data.vocab.tgt
@@ -87,7 +90,7 @@ src_feats_vocab:
     feat_21: java_small_transformer_small/vocab/data.vocab.feat_21
     feat_22: java_small_transformer_small/vocab/data.vocab.feat_22
     feat_23: java_small_transformer_small/vocab/data.vocab.feat_23
-feat_merge: 'mlp'
+feat_merge: 'sum'
 
 save_data: java_small_data
 overwrite: False

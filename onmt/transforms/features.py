@@ -30,7 +30,8 @@ class FilterFeatsTransform(Transform):
 
         for feat_name, feat_values in example['src_feats'].items():
             if len(example['src']) != len(feat_values):
-                logger.warning(f"Skipping example due to mismatch between source and feature {feat_name}")
+                logger.warning(f"Skipping example due to mismatch between source length ({len(example['src'])}) "
+                               f"and feature {feat_name} length ({len(feat_values)})")
                 return None
         return example
 
