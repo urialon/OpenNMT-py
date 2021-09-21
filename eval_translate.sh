@@ -9,7 +9,7 @@ mkdir -p ${output_dir}
 for model in $(ls -t ${model_name}/model_step_*.pt)
 do
     output=${output_dir}/${model}.txt
-    python3 python onmt/bin/translate.py -model ${model} -src ${val_target} -output ${output} -n_best 5 -beam_size 5 -gpu 0
+    python onmt/bin/translate.py -model ${model} -src ${val_target} -output ${output} -n_best 5 -beam_size 5 -gpu 0
 done
 
 for translation in $(ls ${output_dir}/model*); do
