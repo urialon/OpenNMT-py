@@ -23,11 +23,11 @@ for translation in $(ls ${output_dir}/model*); do
     echo $translation;
     python eval_seq2seq.py --expected ${val_target} --actual ${translation}; done > ${output_dir}/validation_log.txt
 
-best_model=$(basename $(cat ${output_dir}/validation_log.txt | grep 'Final' | sort -n -k 3 | tail -1 | cut -d' ' -f2)%.*)
-best=${best%.*}
+best_model=$(basename $(cat ${output_dir}/validation_log.txt | grep 'Final' | sort -n -k 3 | tail -1 | cut -d' ' -f2))
+best_model=${best_model%.*}
 
-echo Best model: ${best}
-test_output=${model_name}/test_translation_${best}
+echo Best model: ${best_model}
+test_output=${model_name}/test_translation_${best_model}
 python onmt/bin/translate.py -model ${model_name}/${model} -src ${test_source} -output ${test_output} -n_best 5 -beam_size 5 -gpu 0
 python eval_seq2seq.py --expected ${test_target} --actual ${test_output}; done
-python eval_seq2seq.py --expected ${test_target} --actual ${test_output}; done > ${model_name}/results_${best}
+python eval_seq2seq.py --expected ${test_target} --actual ${test_output}; done > ${model_name}/results_${best_model}
