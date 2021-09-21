@@ -88,3 +88,5 @@ if __name__ == '__main__':
 
     #for k,v in s:
     #    print(v, ': ', k)
+
+    print(f'Final: {args.actual} {accuracies[0]}')
