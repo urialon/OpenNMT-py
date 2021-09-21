@@ -27,7 +27,10 @@ best_model=$(basename $(cat ${output_dir}/validation_log.txt | grep 'Final' | so
 best_model=${best_model%.*}
 
 echo Best model: ${best_model}
+echo Best model validation scores:
+python eval_seq2seq.py --expected ${val_target} --actual ${output_dir}/${best_model}.txt
+
 test_output=${model_name}/test_translation_${best_model}
-python onmt/bin/translate.py -model ${model_name}/${model} -src ${test_source} -output ${test_output} -n_best 5 -beam_size 5 -gpu 0
+python onmt/bin/translate.py -model ${model} -src ${test_source} -output ${test_output} -n_best 5 -beam_size 5 -gpu 0
 python eval_seq2seq.py --expected ${test_target} --actual ${test_output}; done
 python eval_seq2seq.py --expected ${test_target} --actual ${test_output}; done > ${model_name}/results_${best_model}
