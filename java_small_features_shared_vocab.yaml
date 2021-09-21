@@ -92,6 +92,7 @@ src_feats_vocab:
     feat_23: java_small_transformer_sum/data/vocab/data.vocab.feat_23
 feat_merge: 'sum'
 share_vocab: True
+copy_attn: True
 
 save_data: java_small_data
 overwrite: False
