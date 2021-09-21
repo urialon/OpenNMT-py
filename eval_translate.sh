@@ -30,6 +30,7 @@ echo Best model: ${best_model}
 echo Best model validation scores:
 python eval_seq2seq.py --expected ${val_target} --actual ${output_dir}/${best_model}.txt
 
+echo Test results:
 test_output=${model_name}/test_translation_${best_model}
 python onmt/bin/translate.py -model ${model} -src ${test_source} -output ${test_output} -n_best 5 -beam_size 5 -gpu 0
 python eval_seq2seq.py --expected ${test_target} --actual ${test_output}
