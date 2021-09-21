@@ -64,7 +64,7 @@ tgt_onmttok_kwargs: "{'mode': 'space'}"
 
 # # Vocab opts
 src_vocab: java_small_transformer_sum/data_shared/data.vocab.src
-tgt_vocab: java_small_transformer_sum/data_shared/data.vocab.tgt
+tgt_vocab: java_small_transformer_sum/data_shared/data.vocab.src
 src_feats_vocab:
     feat_0: java_small_transformer_sum/data/vocab/data.vocab.feat_0
     feat_1: java_small_transformer_sum/data/vocab/data.vocab.feat_1
