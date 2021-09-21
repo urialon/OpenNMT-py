@@ -3,7 +3,7 @@ test_source=../synpos/data/java-small-processed/test_src.txt
 val_target=../synpos/data/java-seq2seq-data/data.TargetType.seq.val.target.txt
 test_target=../synpos/data/java-seq2seq-data/data.TargetType.seq.test.target.txt
 
-model_name=java_small_transformer_nofeat
+model_name=$1
 output_dir=${model_name}/validation_results/
 
 #set -o xtrace
