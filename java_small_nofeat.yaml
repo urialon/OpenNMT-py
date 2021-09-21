@@ -21,7 +21,7 @@ overwrite: False
 
 #save_model: java_small_transformer_nofeat/model
 save_checkpoint_steps: 1000
-keep_checkpoint: 10
+keep_checkpoint: 20
 seed: 3435
 train_steps: 500000
 valid_steps: 1000
