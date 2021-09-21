@@ -6,7 +6,7 @@ test_target=../synpos/data/java-seq2seq-data/data.TargetType.seq.test.target.txt
 model_name=java_small_transformer_nofeat
 output_dir=${model_name}/validation_results/
 
-set -o xtrace
+#set -o xtrace
 
 mkdir -p ${output_dir}
 
