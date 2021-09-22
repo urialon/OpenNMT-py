@@ -33,6 +33,6 @@ python eval_seq2seq.py --expected ${val_target} --actual ${output_dir}/${best_mo
 echo
 echo Test results:
 test_output=${model_name}/test_translation_${best_model}
-python onmt/bin/translate.py -model ${model} -src ${test_source} -output ${test_output} -n_best 5 -beam_size 5 -gpu 0
+python onmt/bin/translate.py -model ${best_model} -src ${test_source} -output ${test_output} -n_best 5 -beam_size 5 -gpu 0
 python eval_seq2seq.py --expected ${test_target} --actual ${test_output}
 python eval_seq2seq.py --expected ${test_target} --actual ${test_output} > ${model_name}/results_${best_model}
