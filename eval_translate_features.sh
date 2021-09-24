@@ -11,7 +11,7 @@ src_feats="{'feat_0': '../synpos/data/java-small-processed/val_feat0.txt', 'feat
 
 mkdir -p ${output_dir}
 
-for model in $(ls -t ${model_name}/model*.pt)
+for model in $(ls -tr ${model_name}/model*.pt)
 do
     echo Translating ${model}...
     output=${output_dir}/$(basename $model).txt
