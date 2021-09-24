@@ -10,7 +10,7 @@ output_dir=${model_name}/validation_results/
 
 mkdir -p ${output_dir}
 
-for model in $(ls -t ${model_name}/model_step_*.pt)
+for model in $(ls -tr ${model_name}/model_step_*.pt)
 do
     echo Translating ${model}...
     output=${output_dir}/$(basename $model).txt
