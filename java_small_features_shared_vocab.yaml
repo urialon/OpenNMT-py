@@ -90,7 +90,7 @@ src_feats_vocab:
     feat_21: java_small_transformer_sum/data/vocab/data.vocab.feat_21
     feat_22: java_small_transformer_sum/data/vocab/data.vocab.feat_22
     feat_23: java_small_transformer_sum/data/vocab/data.vocab.feat_23
-feat_merge: 'sum'
+feat_merge: 'mlp'
 share_vocab: True
 copy_attn: True
 
@@ -98,11 +98,11 @@ save_data: java_small_data
 overwrite: False
 
 #save_model: java_small_transformer_sum/model
-save_checkpoint_steps: 10000
+save_checkpoint_steps: 1000
 keep_checkpoint: 20
 seed: 3435
 train_steps: 500000
-valid_steps: 10000
+valid_steps: 1000
 warmup_steps: 8000
 report_every: 100
 
