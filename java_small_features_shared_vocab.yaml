@@ -105,6 +105,9 @@ train_steps: 500000
 valid_steps: 1000
 warmup_steps: 8000
 report_every: 100
+# Uri:
+early_stopping: 10
+early_stopping_criteria: accuracy
 
 decoder_type: transformer
 encoder_type: transformer
