@@ -1,0 +1,79 @@
+data:
+    corpus_1:
+        path_src: ../synpos/data/test/test_source.txt
+        path_tgt: ../synpos/data/test/test_target.txt
+        src_feats:
+            feat_0: ../synpos/data/test/test_feat0.txt
+            feat_1: ../synpos/data/test/test_feat1.txt
+        transforms: [filterfeats, onmt_tokenize, inferfeats] #, filtertoolong]
+        weight: 1
+    valid:
+        path_src: ../synpos/data/test/test_source.txt
+        path_tgt: ../synpos/data/test/test_target.txt
+        src_feats:
+            feat_0: ../synpos/data/test/test_feat0.txt
+            feat_1: ../synpos/data/test/test_feat1.txt
+        transforms: [filterfeats, onmt_tokenize, inferfeats]
+
+src_onmttok_kwargs: "{'mode': 'space'}"
+tgt_onmttok_kwargs: "{'mode': 'space'}"
+
+# # Vocab opts
+src_vocab: test_data/data.vocab.src
+tgt_vocab: test_data/data.vocab.tgt
+src_feats_vocab:
+    feat_0: test_data/vocab/data.vocab.feat_0
+    feat_1: test_data/vocab/data.vocab.feat_1
+
+feat_merge: 'sharemlp'
+src_vocab_size: 2000
+share_vocab: True
+copy_attn: True
+
+save_data: java_small_data
+overwrite: False
+
+save_model: test_model/model
+save_checkpoint_steps: 1000
+keep_checkpoint: 20
+seed: 3435
+train_steps: 500000
+valid_steps: 1000
+warmup_steps: 8000
+report_every: 100
+# Uri:
+early_stopping: 10
+early_stopping_criteria: accuracy
+
+decoder_type: transformer
+encoder_type: transformer
+word_vec_size: 512
+rnn_size: 512
+layers: 6
+transformer_ff: 2048
+heads: 8
+
+accum_count: 8
+optim: adam
+adam_beta1: 0.9
+adam_beta2: 0.998
+decay_method: noam
+learning_rate: 2.0
+max_grad_norm: 0.0
+
+batch_size: 4096
+batch_type: tokens
+normalization: tokens
+dropout: 0.1
+label_smoothing: 0.1
+
+max_generator_batches: 2
+
+param_init: 0.0
+param_init_glorot: 'true'
+position_encoding: 'true'
+
+world_size: 1
+#gpu_ranks:
+#- 0
+

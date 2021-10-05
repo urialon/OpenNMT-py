@@ -34,6 +34,9 @@ def build_embeddings(opt, text_field, for_encoder=True):
 
     num_embs = [len(f.vocab) for _, f in text_field]
     num_word_embeddings, num_feat_embeddings = num_embs[0], num_embs[1:]
+    if opt.feat_merge == 'sharemlp':
+        shared_feat_vocab = set().union(*[set(f.vocab.itos) for _, f in text_field[1:]])
+        num_feat_embeddings = [len(shared_feat_vocab) for feat in num_feat_embeddings]
 
     freeze_word_vecs = opt.freeze_word_vecs_enc if for_encoder \
         else opt.freeze_word_vecs_dec

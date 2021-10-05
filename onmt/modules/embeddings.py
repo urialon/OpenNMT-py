@@ -138,15 +138,23 @@ class Embeddings(nn.Module):
         else:
             feat_dims = [int(vocab ** feat_vec_exponent)
                          for vocab in feat_vocab_sizes]
-        vocab_sizes.extend(feat_vocab_sizes)
-        emb_dims.extend(feat_dims)
-        pad_indices.extend(feat_padding_idx)
 
-        # The embedding matrix look-up tables. The first look-up table
-        # is for words. Subsequent ones are for features, if any exist.
-        emb_params = zip(vocab_sizes, emb_dims, pad_indices)
-        embeddings = [nn.Embedding(vocab, dim, padding_idx=pad, sparse=sparse)
-                      for vocab, dim, pad in emb_params]
+        if feat_merge == 'sharemlp' and len(feat_vocab_sizes) > 0:
+            emb_dims.extend(feat_dims)
+
+            token_emb = nn.Embedding(vocab_sizes[0], emb_dims[0], padding_idx=pad_indices[0], sparse=sparse)
+            feat_emb = nn.Embedding(feat_vocab_sizes[0], feat_dims[0], padding_idx=feat_padding_idx[0], sparse=sparse)
+            embeddings = [token_emb] + [feat_emb] * len(feat_vocab_sizes)
+        else:
+            vocab_sizes.extend(feat_vocab_sizes)
+            emb_dims.extend(feat_dims)
+            pad_indices.extend(feat_padding_idx)
+
+            # The embedding matrix look-up tables. The first look-up table
+            # is for words. Subsequent ones are for features, if any exist.
+            emb_params = zip(vocab_sizes, emb_dims, pad_indices)
+            embeddings = [nn.Embedding(vocab, dim, padding_idx=pad, sparse=sparse)
+                          for vocab, dim, pad in emb_params]
         emb_luts = Elementwise(feat_merge, embeddings)
 
         # The final output size of word + feature vectors. This can vary
@@ -165,7 +173,7 @@ class Embeddings(nn.Module):
         self.make_embedding = nn.Sequential()
         self.make_embedding.add_module('emb_luts', emb_luts)
 
-        if feat_merge == 'mlp' and len(feat_vocab_sizes) > 0:
+        if feat_merge in ['mlp', 'sharemlp'] and len(feat_vocab_sizes) > 0:
             in_dim = sum(emb_dims)
             mlp = nn.Sequential(nn.Linear(in_dim, word_vec_size), nn.ReLU())
             self.make_embedding.add_module('mlp', mlp)
