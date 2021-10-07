@@ -16,7 +16,7 @@ def _get_dynamic_fields(opts):
                         src_truncate=opts.src_seq_length_trunc,
                         tgt_truncate=opts.tgt_seq_length_trunc,
                         with_align=with_align,
-                        data_task=opts.data_task)
+                        data_task=opts.data_task, pad='<PAD>')
 
     return fields
 
