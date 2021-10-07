@@ -4,7 +4,7 @@ data:
         path_tgt: ../synpos/data/test/test_target.txt
         src_feats:
             feat_0: ../synpos/data/test/test_feat0.txt
-            feat_1: ../synpos/data/test/test_feat1.txt
+            feat_1: ../synpos/data/test/test_feat3.txt
         transforms: [filterfeats, onmt_tokenize, inferfeats] #, filtertoolong]
         weight: 1
     valid:

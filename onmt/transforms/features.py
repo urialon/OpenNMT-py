@@ -72,13 +72,13 @@ class InferFeatsTransform(Transform):
         for subword, word_id in zip(example["src"], word_to_subword_mapping):
             for feat_name, feat_values in example["src_feats"].items():
                 # If case markup placeholder
-                if subword in SubwordMarker.CASE_MARKUP:
-                    inferred_feat = "<null>"
+                # if subword in SubwordMarker.CASE_MARKUP:
+                #     inferred_feat = "<null>"
                 # Punctuation only (assumes joiner is also some punctuation token)
-                elif not re.sub(r'(\W)+', '', subword).strip():
-                    inferred_feat = "<null>"
-                else:
-                    inferred_feat = feat_values[word_id]
+                # elif not re.sub(r'(\W)+', '', subword).strip():
+                #     inferred_feat = "<null>"
+                # else:
+                inferred_feat = feat_values[word_id]
 
                 inferred_feats[feat_name].append(inferred_feat)
 
