@@ -16,7 +16,11 @@ for model in $(ls -tr ${model_name}/model*.pt)
 do
     echo Translating ${model}...
     output=${output_dir}/$(basename $model).txt
-    python onmt/bin/translate.py -model ${model} -src ${val_source} -output ${output} -n_best 5 -beam_size 5 -gpu 0 -src_feats "${val_src_feats}"
+    if [ -f $output ]; then
+       echo "Translation for $output exists."
+    else
+       python onmt/bin/translate.py -model ${model} -src ${val_source} -output ${output} -n_best 5 -beam_size 5 -gpu 0 -src_feats "${val_src_feats}"
+    fi
 done
 
 for translation in $(ls ${output_dir}/model*); do
