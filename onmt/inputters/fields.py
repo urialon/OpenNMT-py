@@ -48,7 +48,7 @@ def build_dynamic_fields(opts, src_specials=None, tgt_specials=None):
     else:
         raise ValueError("-tgt_vocab should be specified if not share_vocab.")
 
-    if opts.feat_merge == 'sharemlp':
+    if opts.feat_merge in ['sharemlp', 'sharemlplin']:
         shared_feat_count = sum([counters[feat_name] for feat_name in opts.src_feats_vocab.keys()], Counter())
         logger.info(f"Building a shared feature vocab... size: {len(shared_feat_count)}")
         # counters['shared_src_feat'] = shared_feat_count

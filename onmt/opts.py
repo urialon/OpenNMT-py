@@ -237,9 +237,9 @@ def model_opts(parser):
 
     group = parser.add_argument_group('Model-Embedding Features')
     group.add('--feat_merge', '-feat_merge', type=str, default='concat',
-              choices=['concat', 'sum', 'mlp', 'sharemlp'],
+              choices=['concat', 'sum', 'mlp', 'sharemlp', 'sharemlplin'],
               help="Merge action for incorporating features embeddings. "
-                   "Options [concat|sum|mlp|sharemlp].")
+                   "Options [concat|sum|mlp|sharemlp|sharemlplin].")
     group.add('--feat_vec_size', '-feat_vec_size', type=int, default=-1,
               help="If specified, feature embedding sizes "
                    "will be set to this. Otherwise, feat_vec_exponent "

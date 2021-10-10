@@ -139,7 +139,7 @@ class Embeddings(nn.Module):
             feat_dims = [int(vocab ** feat_vec_exponent)
                          for vocab in feat_vocab_sizes]
 
-        if feat_merge == 'sharemlp' and len(feat_vocab_sizes) > 0:
+        if feat_merge in ['sharemlp', 'sharemlplin'] and len(feat_vocab_sizes) > 0:
             emb_dims.extend(feat_dims)
 
             token_emb = nn.Embedding(vocab_sizes[0], emb_dims[0], padding_idx=pad_indices[0], sparse=sparse)
@@ -173,9 +173,12 @@ class Embeddings(nn.Module):
         self.make_embedding = nn.Sequential()
         self.make_embedding.add_module('emb_luts', emb_luts)
 
-        if feat_merge in ['mlp', 'sharemlp'] and len(feat_vocab_sizes) > 0:
+        if feat_merge in ['mlp', 'sharemlp', 'sharemlplin'] and len(feat_vocab_sizes) > 0:
             in_dim = sum(emb_dims)
-            mlp = nn.Sequential(nn.Linear(in_dim, word_vec_size), nn.ReLU())
+            if feat_merge == 'sharemlplin':
+                mlp = nn.Sequential(nn.Linear(in_dim, word_vec_size))
+            else:
+                mlp = nn.Sequential(nn.Linear(in_dim, word_vec_size), nn.ReLU())
             self.make_embedding.add_module('mlp', mlp)
 
         self.position_encoding = position_encoding
