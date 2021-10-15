@@ -1,7 +1,9 @@
-val_source=../synpos/data/java-small-processed/val_src.txt
-test_source=../synpos/data/java-small-processed/test_src.txt
-val_target=../synpos/data/java-seq2seq-data/data.TargetType.seq.val.target.txt
-test_target=../synpos/data/java-seq2seq-data/data.TargetType.seq.test.target.txt
+dataset=java-med
+
+val_source=../synpos/data/${dataset}-processed/val_src.txt
+test_source=../synpos/data/${dataset}-processed/test_src.txt
+val_target=../synpos/data/${dataset}/${dataset}.TargetType.seq.val.target.txt
+test_target=../synpos/data/${dataset}/${dataset}.TargetType.seq.test.target.txt
 
 model_name=$1
 output_dir=${model_name}/validation_results/
