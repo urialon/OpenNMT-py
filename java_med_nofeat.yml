@@ -33,6 +33,7 @@ copy_attn: True
 #early_stopping: 10
 #early_stopping_criteria: accuracy
 src_vocab_size: 2000
+valid_batch_size: 8192
 
 decoder_type: transformer
 encoder_type: transformer
