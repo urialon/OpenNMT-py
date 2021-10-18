@@ -407,8 +407,10 @@ class ONMTTokenizerTransform(TokenizerTransform):
         """Do OpenNMT Tokenizer's tokenize."""
         tokenizer = self.load_models[side]
         sentence = ' '.join(tokens)
-        segmented, _ = tokenizer.tokenize(sentence)
-        return segmented
+        # Uri: disabling tokenization
+        # segmented, _ = tokenizer.tokenize(sentence)
+        # return segmented
+        return tokens
 
     def apply(self, example, is_train=False, stats=None, **kwargs):
         """Apply OpenNMT Tokenizer to src & tgt."""
