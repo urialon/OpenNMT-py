@@ -93,6 +93,7 @@ src_feats_vocab:
 feat_merge: 'sharemlp'
 src_vocab_size: 2000
 share_vocab: True
+share_embeddings: True
 copy_attn: True
 
 save_data: java_med_data
@@ -137,6 +138,7 @@ max_generator_batches: 2
 param_init: 0.0
 param_init_glorot: 'true'
 #position_encoding: 'true'
+max_relative_positions: 200 
 
 world_size: 2
 gpu_ranks:
