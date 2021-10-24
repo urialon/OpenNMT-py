@@ -19,11 +19,11 @@ tgt_vocab: java_med/data_shared/data.vocab.src
 save_data: java_med_data
 overwrite: False
 
-save_checkpoint_steps: 1000
+save_checkpoint_steps: 10000
 keep_checkpoint: 20
 seed: 3435
 train_steps: 500000
-valid_steps: 1000
+valid_steps: 10000
 warmup_steps: 8000
 report_every: 100
 share_embeddings: True
@@ -39,11 +39,14 @@ decoder_type: transformer
 encoder_type: transformer
 word_vec_size: 512
 rnn_size: 512
-layers: 6
+#layers: 6
+enc_layers: 6
+dec_layers: 6
 transformer_ff: 2048
 heads: 8
 
-accum_count: 8
+accum_count: [4]
+accum_steps: [0]
 optim: adam
 adam_beta1: 0.9
 adam_beta2: 0.998
@@ -51,10 +54,13 @@ decay_method: noam
 learning_rate: 2.0
 max_grad_norm: 0.0
 
+queue_size: 10000
+bucket_size: 32768
 batch_size: 4096
 batch_type: tokens
 normalization: tokens
 dropout: 0.1
+attention_dropout: [0.1]
 label_smoothing: 0.1
 
 max_generator_batches: 2
