@@ -3,7 +3,9 @@ dataset=$1
 val_source=../synpos/data/${dataset}-processed/val_src.txt
 test_source=../synpos/data/${dataset}-processed/test_src.txt
 val_target=../synpos/data/${dataset}/${dataset}.TargetType.seq.val.target.txt
+#val_target=../synpos/data/${dataset}/data.TargetType.seq.val.target.txt
 test_target=../synpos/data/${dataset}/${dataset}.TargetType.seq.test.target.txt
+#test_target=../synpos/data/${dataset}/data.TargetType.seq.test.target.txt
 
 model_name=$2
 output_dir=${model_name}/validation_results/
@@ -50,7 +52,7 @@ if [ -f $test_output ]; then
    echo "Translation for $test_output exists."
 else
    python onmt/bin/translate.py -model ${model_name}/${best_model} -src ${test_source} -output ${test_output} \
-   -n_best 5 -beam_size 5 -gpu 0 --replace_unk -src_feats "${test_src_feats}" -batch_size 2
+   -n_best 5 -beam_size 5 -gpu 0 --replace_unk -src_feats "${test_src_feats}" -batch_size 16
 fi
 python eval_seq2seq.py --expected ${test_target} --actual ${test_output}
 python eval_seq2seq.py --expected ${test_target} --actual ${test_output} > ${model_name}/results_${best_model}

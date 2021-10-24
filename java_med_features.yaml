@@ -91,6 +91,7 @@ src_feats_vocab:
     feat_22: java_med/data/vocab/data.vocab.feat_22
     feat_23: java_med/data/vocab/data.vocab.feat_23
 feat_merge: 'sharemlp'
+feat_vec_size: 32
 src_vocab_size: 2000
 share_vocab: True
 share_embeddings: True
