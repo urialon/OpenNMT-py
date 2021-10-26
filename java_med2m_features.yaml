@@ -30,33 +30,33 @@ data:
         transforms: [filterfeats, onmt_tokenize, inferfeats] #, filtertoolong]
         weight: 1
     valid:
-        path_src: ../synpos/data/java-med2m-processed/val_src.txt
-        path_tgt: ../synpos/data/java-med2m/java-med2m.TargetType.seq.val.target.txt
+        path_src: ../synpos/data/java-med-processed/val_src.txt
+        path_tgt: ../synpos/data/java-med/java-med.TargetType.seq.val.target.txt
         src_feats:
-            feat_0: ../synpos/data/java-med2m-processed/val_feat0.txt
-            feat_1: ../synpos/data/java-med2m-processed/val_feat1.txt
-            feat_2: ../synpos/data/java-med2m-processed/val_feat2.txt
-            feat_3: ../synpos/data/java-med2m-processed/val_feat3.txt
-            feat_4: ../synpos/data/java-med2m-processed/val_feat4.txt
-            feat_5: ../synpos/data/java-med2m-processed/val_feat5.txt
-            feat_6: ../synpos/data/java-med2m-processed/val_feat6.txt
-            feat_7: ../synpos/data/java-med2m-processed/val_feat7.txt
-            feat_8: ../synpos/data/java-med2m-processed/val_feat8.txt
-            feat_9: ../synpos/data/java-med2m-processed/val_feat9.txt
-            feat_10: ../synpos/data/java-med2m-processed/val_feat10.txt
-            feat_11: ../synpos/data/java-med2m-processed/val_feat11.txt
-            feat_12: ../synpos/data/java-med2m-processed/val_feat12.txt
-            feat_13: ../synpos/data/java-med2m-processed/val_feat13.txt
-            feat_14: ../synpos/data/java-med2m-processed/val_feat14.txt
-            feat_15: ../synpos/data/java-med2m-processed/val_feat15.txt
-            feat_16: ../synpos/data/java-med2m-processed/val_feat16.txt
-            feat_17: ../synpos/data/java-med2m-processed/val_feat17.txt
-            feat_18: ../synpos/data/java-med2m-processed/val_feat18.txt
-            feat_19: ../synpos/data/java-med2m-processed/val_feat19.txt
-            feat_20: ../synpos/data/java-med2m-processed/val_feat20.txt
-            feat_21: ../synpos/data/java-med2m-processed/val_feat21.txt
-            feat_22: ../synpos/data/java-med2m-processed/val_feat22.txt
-            feat_23: ../synpos/data/java-med2m-processed/val_feat23.txt
+            feat_0: ../synpos/data/java-med-processed/val_feat0.txt
+            feat_1: ../synpos/data/java-med-processed/val_feat1.txt
+            feat_2: ../synpos/data/java-med-processed/val_feat2.txt
+            feat_3: ../synpos/data/java-med-processed/val_feat3.txt
+            feat_4: ../synpos/data/java-med-processed/val_feat4.txt
+            feat_5: ../synpos/data/java-med-processed/val_feat5.txt
+            feat_6: ../synpos/data/java-med-processed/val_feat6.txt
+            feat_7: ../synpos/data/java-med-processed/val_feat7.txt
+            feat_8: ../synpos/data/java-med-processed/val_feat8.txt
+            feat_9: ../synpos/data/java-med-processed/val_feat9.txt
+            feat_10: ../synpos/data/java-med-processed/val_feat10.txt
+            feat_11: ../synpos/data/java-med-processed/val_feat11.txt
+            feat_12: ../synpos/data/java-med-processed/val_feat12.txt
+            feat_13: ../synpos/data/java-med-processed/val_feat13.txt
+            feat_14: ../synpos/data/java-med-processed/val_feat14.txt
+            feat_15: ../synpos/data/java-med-processed/val_feat15.txt
+            feat_16: ../synpos/data/java-med-processed/val_feat16.txt
+            feat_17: ../synpos/data/java-med-processed/val_feat17.txt
+            feat_18: ../synpos/data/java-med-processed/val_feat18.txt
+            feat_19: ../synpos/data/java-med-processed/val_feat19.txt
+            feat_20: ../synpos/data/java-med-processed/val_feat20.txt
+            feat_21: ../synpos/data/java-med-processed/val_feat21.txt
+            feat_22: ../synpos/data/java-med-processed/val_feat22.txt
+            feat_23: ../synpos/data/java-med-processed/val_feat23.txt
         transforms: [filterfeats, onmt_tokenize, inferfeats]
 
 src_onmttok_kwargs: "{'mode': 'space'}"

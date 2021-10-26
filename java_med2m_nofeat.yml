@@ -5,8 +5,8 @@ data:
         transforms: [filterfeats, onmt_tokenize, inferfeats] #, filtertoolong]
         weight: 1
     valid:
-        path_src: ../synpos/data/java-med2m-processed/val_src.txt
-        path_tgt: ../synpos/data/java-med2m/java-med2m.TargetType.seq.val.target.txt
+        path_src: ../synpos/data/java-med-processed/val_src.txt
+        path_tgt: ../synpos/data/java-med/java-med.TargetType.seq.val.target.txt
         transforms: [filterfeats, onmt_tokenize, inferfeats]
 
 src_onmttok_kwargs: "{'mode': 'space'}"
