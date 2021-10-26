@@ -32,7 +32,8 @@ copy_attn: True
 # Uri:
 #early_stopping: 10
 #early_stopping_criteria: accuracy
-src_vocab_size: 2000
+#src_vocab_size: 2000
+src_vocab_size: 32000
 valid_batch_size: 8192
 
 decoder_type: transformer
@@ -54,7 +55,7 @@ decay_method: noam
 learning_rate: 2.0
 max_grad_norm: 0.0
 
-queue_size: 10000
+queue_size: 1000
 bucket_size: 32768
 batch_size: 4096
 batch_type: tokens
