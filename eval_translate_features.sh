@@ -29,12 +29,13 @@ do
     fi
 done
 
-for translation in $(ls ${output_dir}/model*); do
-    echo $translation;
-    python eval_seq2seq.py --expected ${val_target} --actual ${translation}; done
+#for translation in $(ls ${output_dir}/model*); do
+#    echo $translation;
+#    python eval_seq2seq.py --expected ${val_target} --actual ${translation}; done
 for translation in $(ls ${output_dir}/model*); do
     echo $translation;
     python eval_seq2seq.py --expected ${val_target} --actual ${translation}; done > ${output_dir}/validation_log.txt
+cat ${output_dir}/validation_log.txt
 
 best_model=$(basename $(cat ${output_dir}/validation_log.txt | grep 'Final' | sort -n -k 3 | tail -1 | cut -d' ' -f2))
 best_model=${best_model%.*}
