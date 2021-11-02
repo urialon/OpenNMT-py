@@ -3,7 +3,7 @@
 set -e
 
 model_name=$1
-mkdir ${model_name}
+#mkdir ${model_name}
 
 python -u onmt/bin/train.py --config java_med2m_features.yaml --save_mode ${model_name}/model ${@:2}
 

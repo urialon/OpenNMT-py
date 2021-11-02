@@ -45,6 +45,13 @@ echo
 echo Best model validation scores:
 python eval_seq2seq.py --expected ${val_target} --actual ${output_dir}/${best_model}.txt
 
+if [ -f ${model_name}/keep/${best_model} ]; then
+    echo "Best model ${best_model} already in ${model_name}/keep/"
+else
+    rm ${model_name}/keep/*
+    cp ${model_name}/${best_model} ${model_name}/keep/
+fi
+
 echo
 echo Test results:
 test_output=${model_name}/test_translation_${best_model}

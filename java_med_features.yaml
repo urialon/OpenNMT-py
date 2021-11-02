@@ -101,11 +101,11 @@ copy_attn: True
 save_data: java_med_data
 overwrite: False
 
-save_checkpoint_steps: 10000
+save_checkpoint_steps: 1000
 keep_checkpoint: 30
 seed: 3435
 train_steps: 600000
-valid_steps: 10000
+valid_steps: 1000
 warmup_steps: 8000
 report_every: 100
 # Uri:
@@ -132,7 +132,7 @@ decay_method: noam
 learning_rate: 2.0
 max_grad_norm: 0.0
 
-queue_size: 1000
+queue_size: 100
 bucket_size: 32768
 batch_size: 4096
 batch_type: tokens
