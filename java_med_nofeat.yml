@@ -19,11 +19,11 @@ tgt_vocab: java_med/data_shared/data.vocab.src
 save_data: java_med_data
 overwrite: False
 
-save_checkpoint_steps: 1000
+save_checkpoint_steps: 10000
 keep_checkpoint: 20
 seed: 3435
 train_steps: 500000
-valid_steps: 1000
+valid_steps: 10000
 warmup_steps: 8000
 report_every: 100
 share_embeddings: True
