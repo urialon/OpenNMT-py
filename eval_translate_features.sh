@@ -32,7 +32,7 @@ done
 #for translation in $(ls ${output_dir}/model*); do
 #    echo $translation;
 #    python eval_seq2seq.py --expected ${val_target} --actual ${translation}; done
-for translation in $(ls ${output_dir}/model*); do
+for translation in $(ls -tr ${output_dir}/model*); do
     echo $translation;
     python eval_seq2seq.py --expected ${val_target} --actual ${translation}; done > ${output_dir}/validation_log.txt
 cat ${output_dir}/validation_log.txt
