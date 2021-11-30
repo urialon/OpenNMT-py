@@ -1,0 +1,50 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Create training curves",
+            "type": "python",
+            "request": "launch",
+            "program": "scripts/create_training_curve.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--train_log", "logs/sharemlp_merged_log.txt", 
+                "--baseline_train_log", "logs/nofeat_merged_log.txt", 
+                // "--baseline_train_log", "logs/nofeat256_merged_log.txt", 
+            ]
+        },
+        {
+            "name": "Create eval curves",
+            "type": "python",
+            "request": "launch",
+            "program": "scripts/create_eval_curve.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--log", "logs/sharemlp_validation_log.txt", 
+                "--baseline_log", "logs/java_med_nofeat_validation_log.txt",
+                "--small_log", "logs/sharemlp256_validation_log.txt",
+                "--small_baseline_log", "logs/nofeat256_validation_log.txt",
+                // "--train_log", "logs/sharemlp_merged_log.txt", 
+                // "--baseline_train_log", "logs/nofeat_merged_log.txt", 
+
+            ]
+        },
+        {
+            "name": "Analyze predictions",
+            "type": "python",
+            "request": "launch",
+            "program": "scripts/analyze_pred.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--expected", "logs/java-med.TargetType.seq.val.target.txt", 
+                "--src", "logs/val_src.txt", 
+                "--actual_model", "logs/sharemlp_model_step_980000.pt.txt", 
+                // "--actual_model", "logs/sharemlp256_model_step_540000.pt.txt", 
+                "--actual_baseline", "logs/nofeat_model_step_980000.pt.txt", 
+            ]
+        }
+    ]
+}
