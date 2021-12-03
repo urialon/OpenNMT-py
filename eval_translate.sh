@@ -20,14 +20,14 @@ do
        echo "Translation for $output exists."
     else
        python onmt/bin/translate.py -model ${model} -src ${val_source} -output ${output} \
-           -n_best 5 -beam_size 5 -gpu 0 --replace_unk -batch_size 32
+           -n_best 5 -beam_size 5 -gpu 0 --replace_unk -batch_size 16
     fi
 done
 
 #for translation in $(ls ${output_dir}/model*); do
 #    echo $translation;
 #    python eval_seq2seq.py --expected ${val_target} --actual ${translation}; done
-for translation in $(ls -tr${output_dir}/model*); do
+for translation in $(ls -tr ${output_dir}/model*); do
     echo $translation;
     python eval_seq2seq.py --expected ${val_target} --actual ${translation}; done > ${output_dir}/validation_log.txt
 cat ${output_dir}/validation_log.txt

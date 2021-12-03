@@ -41,8 +41,8 @@
             "args": [
                 "--expected", "logs/java-med.TargetType.seq.val.target.txt", 
                 "--src", "logs/val_src.txt", 
-                "--actual_model", "logs/sharemlp_model_step_980000.pt.txt", 
-                // "--actual_model", "logs/sharemlp256_model_step_540000.pt.txt", 
+                // "--actual_model", "logs/sharemlp_model_step_980000.pt.txt", 
+                "--actual_model", "logs/sharemlp256_model_step_540000.pt.txt", 
                 "--actual_baseline", "logs/nofeat_model_step_980000.pt.txt", 
             ]
         }

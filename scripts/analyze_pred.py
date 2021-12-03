@@ -88,7 +88,7 @@ if __name__ == '__main__':
     min_src_df = pd.DataFrame({'min_src_size': list(range(src_num_bins)) + list(range(src_num_bins)), 
                             'acc': list(model_src_correct[::-1].cumsum()[::-1] / model_src_count[::-1].cumsum()[::-1]) 
                             + list(baseline_src_correct[::-1].cumsum()[::-1] / baseline_src_count[::-1].cumsum()[::-1]),
-                            'model': ['syntactic'] * src_num_bins 
+                            'model': ['syntactic256'] * src_num_bins 
                             + ['baseline'] * src_num_bins
                             })
     ax = sns.lineplot(data=min_src_df, x='min_src_size', y='acc', style='model', hue='model', markers=True)
@@ -122,10 +122,10 @@ if __name__ == '__main__':
     #     baseline_acc = baseline_target_correct[bin:].sum() / baseline_target_count[bin:].sum() * 100
     #     print(f'{int(bin * (target_max - target_min) / target_num_bins)}: Syntactic: {model_acc:.0f}, baseline: {baseline_acc:.0f}')
 
-    count_df = pd.DataFrame({'src_size': list(range(src_num_bins)), 
-                            'count': list(model_src_count),
-                            })
-    ax = sns.barplot(data=count_df, x='src_size', y='count')
-    xlabels = [int(x * (src_max - src_min) / src_num_bins) for x in ax.get_xticks()]
-    ax.set_xticklabels(xlabels)
-    matplotlib.pyplot.show()
+    # count_df = pd.DataFrame({'src_size': list(range(src_num_bins)), 
+    #                         'count': list(model_src_count),
+    #                         })
+    # ax = sns.barplot(data=count_df, x='src_size', y='count')
+    # xlabels = [int(x * (src_max - src_min) / src_num_bins) for x in ax.get_xticks()]
+    # ax.set_xticklabels(xlabels)
+    # matplotlib.pyplot.show()
