@@ -1124,3 +1124,343 @@ Tree-only beam accuracy @k:
 	accuracy@5: 0.69530
 
 Final: java_med_sharemlp256/validation_results//model_step_660000.pt.txt 0.39557
+java_med_sharemlp256/validation_results//model_step_670000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39595
+	accuracy@2: 0.44887
+	accuracy@3: 0.47233
+	accuracy@4: 0.48647
+	accuracy@5: 0.49334
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56146
+	accuracy@2: 0.62911
+	accuracy@3: 0.66218
+	accuracy@4: 0.68251
+	accuracy@5: 0.69513
+
+Final: java_med_sharemlp256/validation_results//model_step_670000.pt.txt 0.39595
+java_med_sharemlp256/validation_results//model_step_680000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39528
+	accuracy@2: 0.44808
+	accuracy@3: 0.47121
+	accuracy@4: 0.48488
+	accuracy@5: 0.49217
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56142
+	accuracy@2: 0.62899
+	accuracy@3: 0.65982
+	accuracy@4: 0.67961
+	accuracy@5: 0.69268
+
+Final: java_med_sharemlp256/validation_results//model_step_680000.pt.txt 0.39528
+java_med_sharemlp256/validation_results//model_step_690000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39543
+	accuracy@2: 0.44925
+	accuracy@3: 0.47359
+	accuracy@4: 0.48646
+	accuracy@5: 0.49347
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56043
+	accuracy@2: 0.62942
+	accuracy@3: 0.66307
+	accuracy@4: 0.68323
+	accuracy@5: 0.69624
+
+Final: java_med_sharemlp256/validation_results//model_step_690000.pt.txt 0.39543
+java_med_sharemlp256/validation_results//model_step_700000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39579
+	accuracy@2: 0.44867
+	accuracy@3: 0.47235
+	accuracy@4: 0.48591
+	accuracy@5: 0.49344
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56154
+	accuracy@2: 0.62890
+	accuracy@3: 0.66147
+	accuracy@4: 0.68165
+	accuracy@5: 0.69500
+
+Final: java_med_sharemlp256/validation_results//model_step_700000.pt.txt 0.39579
+java_med_sharemlp256/validation_results//model_step_710000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39639
+	accuracy@2: 0.44941
+	accuracy@3: 0.47305
+	accuracy@4: 0.48669
+	accuracy@5: 0.49468
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56179
+	accuracy@2: 0.62914
+	accuracy@3: 0.66228
+	accuracy@4: 0.68273
+	accuracy@5: 0.69578
+
+Final: java_med_sharemlp256/validation_results//model_step_710000.pt.txt 0.39639
+java_med_sharemlp256/validation_results//model_step_720000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39542
+	accuracy@2: 0.44910
+	accuracy@3: 0.47212
+	accuracy@4: 0.48596
+	accuracy@5: 0.49381
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56050
+	accuracy@2: 0.62880
+	accuracy@3: 0.66128
+	accuracy@4: 0.68076
+	accuracy@5: 0.69415
+
+Final: java_med_sharemlp256/validation_results//model_step_720000.pt.txt 0.39542
+java_med_sharemlp256/validation_results//model_step_730000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39563
+	accuracy@2: 0.44891
+	accuracy@3: 0.47276
+	accuracy@4: 0.48599
+	accuracy@5: 0.49373
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56059
+	accuracy@2: 0.62870
+	accuracy@3: 0.66170
+	accuracy@4: 0.68171
+	accuracy@5: 0.69535
+
+Final: java_med_sharemlp256/validation_results//model_step_730000.pt.txt 0.39563
+java_med_sharemlp256/validation_results//model_step_740000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39557
+	accuracy@2: 0.44922
+	accuracy@3: 0.47334
+	accuracy@4: 0.48675
+	accuracy@5: 0.49420
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56121
+	accuracy@2: 0.62900
+	accuracy@3: 0.66149
+	accuracy@4: 0.68218
+	accuracy@5: 0.69529
+
+Final: java_med_sharemlp256/validation_results//model_step_740000.pt.txt 0.39557
+java_med_sharemlp256/validation_results//model_step_750000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39543
+	accuracy@2: 0.44826
+	accuracy@3: 0.47189
+	accuracy@4: 0.48555
+	accuracy@5: 0.49304
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56306
+	accuracy@2: 0.62969
+	accuracy@3: 0.66150
+	accuracy@4: 0.68251
+	accuracy@5: 0.69530
+
+Final: java_med_sharemlp256/validation_results//model_step_750000.pt.txt 0.39543
+java_med_sharemlp256/validation_results//model_step_760000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39585
+	accuracy@2: 0.44929
+	accuracy@3: 0.47392
+	accuracy@4: 0.48722
+	accuracy@5: 0.49497
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56178
+	accuracy@2: 0.62936
+	accuracy@3: 0.66266
+	accuracy@4: 0.68225
+	accuracy@5: 0.69619
+
+Final: java_med_sharemlp256/validation_results//model_step_760000.pt.txt 0.39585
+java_med_sharemlp256/validation_results//model_step_770000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39556
+	accuracy@2: 0.44860
+	accuracy@3: 0.47240
+	accuracy@4: 0.48575
+	accuracy@5: 0.49323
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56187
+	accuracy@2: 0.62943
+	accuracy@3: 0.66174
+	accuracy@4: 0.68231
+	accuracy@5: 0.69572
+
+Final: java_med_sharemlp256/validation_results//model_step_770000.pt.txt 0.39556
+java_med_sharemlp256/validation_results//model_step_780000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39764
+	accuracy@2: 0.45083
+	accuracy@3: 0.47444
+	accuracy@4: 0.48777
+	accuracy@5: 0.49535
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56204
+	accuracy@2: 0.62994
+	accuracy@3: 0.66281
+	accuracy@4: 0.68345
+	accuracy@5: 0.69706
+
+Final: java_med_sharemlp256/validation_results//model_step_780000.pt.txt 0.39764
+java_med_sharemlp256/validation_results//model_step_790000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39643
+	accuracy@2: 0.44972
+	accuracy@3: 0.47336
+	accuracy@4: 0.48624
+	accuracy@5: 0.49382
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56235
+	accuracy@2: 0.62962
+	accuracy@3: 0.66143
+	accuracy@4: 0.68114
+	accuracy@5: 0.69481
+
+Final: java_med_sharemlp256/validation_results//model_step_790000.pt.txt 0.39643
+java_med_sharemlp256/validation_results//model_step_800000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39602
+	accuracy@2: 0.44945
+	accuracy@3: 0.47260
+	accuracy@4: 0.48635
+	accuracy@5: 0.49394
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56143
+	accuracy@2: 0.62956
+	accuracy@3: 0.66115
+	accuracy@4: 0.68175
+	accuracy@5: 0.69521
+
+Final: java_med_sharemlp256/validation_results//model_step_800000.pt.txt 0.39602
+java_med_sharemlp256/validation_results//model_step_810000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39653
+	accuracy@2: 0.44973
+	accuracy@3: 0.47290
+	accuracy@4: 0.48667
+	accuracy@5: 0.49413
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56173
+	accuracy@2: 0.62933
+	accuracy@3: 0.66179
+	accuracy@4: 0.68267
+	accuracy@5: 0.69629
+
+Final: java_med_sharemlp256/validation_results//model_step_810000.pt.txt 0.39653
+java_med_sharemlp256/validation_results//model_step_820000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39771
+	accuracy@2: 0.45026
+	accuracy@3: 0.47306
+	accuracy@4: 0.48695
+	accuracy@5: 0.49439
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56368
+	accuracy@2: 0.63027
+	accuracy@3: 0.66198
+	accuracy@4: 0.68215
+	accuracy@5: 0.69505
+
+Final: java_med_sharemlp256/validation_results//model_step_820000.pt.txt 0.39771
+java_med_sharemlp256/validation_results//model_step_830000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39685
+	accuracy@2: 0.44982
+	accuracy@3: 0.47347
+	accuracy@4: 0.48707
+	accuracy@5: 0.49466
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56277
+	accuracy@2: 0.63005
+	accuracy@3: 0.66255
+	accuracy@4: 0.68353
+	accuracy@5: 0.69726
+
+Final: java_med_sharemlp256/validation_results//model_step_830000.pt.txt 0.39685
+java_med_sharemlp256/validation_results//model_step_840000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39570
+	accuracy@2: 0.44920
+	accuracy@3: 0.47316
+	accuracy@4: 0.48688
+	accuracy@5: 0.49424
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56130
+	accuracy@2: 0.62985
+	accuracy@3: 0.66206
+	accuracy@4: 0.68252
+	accuracy@5: 0.69592
+
+Final: java_med_sharemlp256/validation_results//model_step_840000.pt.txt 0.3957
+java_med_sharemlp256/validation_results//model_step_850000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39632
+	accuracy@2: 0.44976
+	accuracy@3: 0.47376
+	accuracy@4: 0.48735
+	accuracy@5: 0.49449
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56250
+	accuracy@2: 0.63019
+	accuracy@3: 0.66275
+	accuracy@4: 0.68290
+	accuracy@5: 0.69569
+
+Final: java_med_sharemlp256/validation_results//model_step_850000.pt.txt 0.39632
+java_med_sharemlp256/validation_results//model_step_860000.pt.txt
+Count: 100000
+Beam size: 5
+Beam accuracy @k:
+	accuracy@1: 0.39765
+	accuracy@2: 0.45125
+	accuracy@3: 0.47474
+	accuracy@4: 0.48845
+	accuracy@5: 0.49583
+Tree-only beam accuracy @k:
+	accuracy@1: 0.56231
+	accuracy@2: 0.62951
+	accuracy@3: 0.66199
+	accuracy@4: 0.68277
+	accuracy@5: 0.69594
+
+Final: java_med_sharemlp256/validation_results//model_step_860000.pt.txt 0.39765
