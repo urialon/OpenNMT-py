@@ -1,4 +1,3 @@
-
 seed: 42
 share_vocab: true
 save_data: data/wikitext-103-raw/run/example
@@ -9,7 +8,7 @@ tgt_vocab_size: 267744
 #src_subword_type: bpe
 #src_subword_model: data/wikitext-103-raw/subwords.bpe
 #src_onmttok_kwargs: '{"mode": "aggressive", "joiner_annotate": True, "preserve_placeholders":
-  True, "case_markup": True, "soft_case_regions": True, "preserve_segmented_tokens":
+#   True, "case_markup": True, "soft_case_regions": True, "preserve_segmented_tokens":
  # True}'
 src_onmttok_kwargs: "{'mode': 'space'}"
 transforms: [onmt_tokenize] #, filtertoolong]
@@ -35,7 +34,7 @@ world_size: 4
 gpu_ranks: [0,1,2,4]
 
 # Where to save the checkpoints
-save_model: wikitext-copy
+save_model: wikitext/model
 save_checkpoint_steps: 50000
 train_steps: 1000000
 valid_steps: 500
