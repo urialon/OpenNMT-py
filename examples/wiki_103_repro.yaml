@@ -32,7 +32,11 @@ data:
 
 # Train on a single GPU
 world_size: 4
-gpu_ranks: [0,1,2,4]
+gpu_ranks:
+- 0
+- 1
+- 2
+- 3
 
 # Where to save the checkpoints
 save_model: wikitext/model
