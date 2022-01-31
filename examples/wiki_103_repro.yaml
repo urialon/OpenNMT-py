@@ -80,9 +80,11 @@ warmup_steps: 16000
 decay_method: "noam"
 adam_beta2: 0.998
 max_grad_norm: 0
-label_smoothing: 0.1
+# label_smoothing: 0.1
 param_init: 0
 param_init_glorot: true
 normalization: "tokens"
 
 accum_count: 3
+
+log_file_level: ERROR
