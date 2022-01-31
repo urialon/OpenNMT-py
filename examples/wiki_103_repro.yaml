@@ -2,7 +2,8 @@ seed: 42
 share_vocab: true
 save_data: data/wikitext-103-raw/run/example
 ## Where the vocab(s) will be written
-src_vocab: data/wikitext-103-raw/run/example.vocab.src
+# src_vocab: data/wikitext-103-raw/run/example.vocab.src
+src_vocab: wikitext/dict.txt
 src_vocab_size: 267744
 tgt_vocab_size: 267744
 #src_subword_type: bpe
