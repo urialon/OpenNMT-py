@@ -54,7 +54,7 @@ decoder_type: transformer_lm
 position_encoding: true
 dec_layers: 16
 heads: 8
-rnn_size: 1024
+rnn_size: 512
 word_vec_size: 512
 transformer_ff: 2048
 dropout_steps: [0]
