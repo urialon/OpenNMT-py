@@ -28,7 +28,7 @@ data:
 
 
 # Vocabulary files that were just created
-src_vocab: data/wikitext-103-raw/run/example.vocab.src
+# src_vocab: data/wikitext-103-raw/run/example.vocab.src
 
 # Train on a single GPU
 world_size: 4
