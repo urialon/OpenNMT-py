@@ -1,0 +1,84 @@
+
+seed: 42
+share_vocab: true
+save_data: data/wikitext-103-raw/run/example
+## Where the vocab(s) will be written
+src_vocab: data/wikitext-103-raw/run/example.vocab.src
+src_vocab_size: 267744
+tgt_vocab_size: 267744
+#src_subword_type: bpe
+#src_subword_model: data/wikitext-103-raw/subwords.bpe
+#src_onmttok_kwargs: '{"mode": "aggressive", "joiner_annotate": True, "preserve_placeholders":
+  True, "case_markup": True, "soft_case_regions": True, "preserve_segmented_tokens":
+ # True}'
+src_onmttok_kwargs: "{'mode': 'space'}"
+transforms: [onmt_tokenize] #, filtertoolong]
+src_seq_length: 999999
+tgt_seq_length: 999999
+
+# Prevent overwriting existing files in the folder
+overwrite: True
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src: ../knnlm/examples/language_model/wikitext-103/wiki.train.tokens
+    valid:
+        path_src: ../knnlm/examples/language_model/wikitext-103/wiki.valid.tokens
+
+
+# Vocabulary files that were just created
+src_vocab: data/wikitext-103-raw/run/example.vocab.src
+
+# Train on a single GPU
+world_size: 4
+gpu_ranks: [0,1,2,4]
+
+# Where to save the checkpoints
+save_model: wikitext-copy
+save_checkpoint_steps: 50000
+train_steps: 1000000
+valid_steps: 500
+report_every: 100
+tensorboard: true
+tensorboard_log_dir: data/wikitext-103-raw/run/tensorboard
+
+# Model
+model_task: lm
+encoder_type: transformer_lm
+decoder_type: transformer_lm
+position_encoding: true
+dec_layers: 16
+heads: 8
+rnn_size: 1024
+word_vec_size: 512
+transformer_ff: 2048
+dropout_steps: [0]
+dropout: [0.3]
+attention_dropout: [0.1]
+# batch_size: 2048
+batch_size: 3072
+batch_type: tokens
+# Missing adaptive inputs and softmax:
+    # args.adaptive_input = getattr(args, 'adaptive_input', True)
+    # args.tie_adaptive_weights = getattr(args, 'tie_adaptive_weights', True)
+    # args.adaptive_input_cutoff = getattr(args, 'adaptive_input_cutoff', '20000,60000')
+    # args.adaptive_softmax_cutoff = getattr(args, 'adaptive_softmax_cutoff', '20000,60000')
+    # args.adaptive_softmax_dropout = getattr(args, 'adaptive_softmax_dropout', 0.2)
+    # args.attention_dropout = getattr(args, 'attention_dropout', 0.1)
+
+model_dtype: "fp16"
+optim: "adam"
+# learning_rate: 2
+learning_rate: 2
+# warmup_steps: 8000
+warmup_steps: 16000
+decay_method: "noam"
+adam_beta2: 0.998
+max_grad_norm: 0
+label_smoothing: 0.1
+param_init: 0
+param_init_glorot: true
+normalization: "tokens"
+
+accum_count: 3
